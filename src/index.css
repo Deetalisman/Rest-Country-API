@@ -1,0 +1,227 @@
+:root {
+  --azure: hsl(0, 0%, 98%);
+  --white: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(207, 26%, 17%);
+}
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.new {
+  background-color: var(--azure);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  position: relative;
+}
+.zoom {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(200, 15%, 8%);
+  top: 0;
+  color: white;
+  display: none;
+}
+header {
+  width: 100%;
+  box-shadow: 0px 15px 10px -20px #111;
+  display: flex;
+  padding: 1.6rem 7%;
+  justify-content: space-between;
+}
+.head-sub {
+  background-color: hsl(209, 19%, 30%);
+  color: hsl(210, 5%, 76%);
+  display: flex;
+  padding: 1.6rem 7%;
+  justify-content: space-between;
+  width: 100%;
+}
+#famoon {
+  margin-right: 0.5rem;
+}
+#dark {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.body {
+  padding: 3rem 7%;
+}
+.body-sub {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(210, 1%, 44%);
+}
+.main-sub {
+  background-color: hsl(209, 19%, 30%);
+  color: hsl(210, 5%, 76%);
+  width: 22%;
+  list-style-type: none;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.32rem 5% 1rem;
+}
+.sub-nav {
+  background-color: hsl(207, 26%, 17%);
+}
+form {
+  width: 35%;
+  box-shadow: 2px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  background-color: white;
+}
+.sub-form {
+  background-color: hsl(209, 19%, 30%);
+  color: hsl(210, 5%, 76%);
+}
+#sub-input {
+  height: 2rem;
+  width: 70%;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  font-size: 18px;
+  margin-left: 1rem;
+}
+.input {
+  color: hsl(210, 5%, 76%);
+}
+.darin {
+  color: hsl(210, 5%, 76%);
+}
+select {
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  padding: 0 1rem;
+}
+.sub-select {
+  background-color: hsl(209, 19%, 30%);
+  color: hsl(210, 5%, 76%);
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.8rem 5% 1rem;
+}
+.sub-section {
+  background-color: hsl(207, 26%, 17%);
+}
+article {
+  width: 22%;
+  list-style-type: none;
+  margin-top: 1.7rem;
+  background-color: var(--white);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+.sub-article {
+  background-color: hsl(209, 19%, 30%);
+  color: hsl(210, 5%, 76%);
+}
+.sub-main {
+  padding: 1.5rem;
+}
+.sub-main p {
+  margin-top: 0.7rem;
+}
+.smt {
+  margin-top: 2rem;
+}
+img {
+  width: 100%;
+  height: 13rem;
+}
+p span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+  article {
+    width: 31%;
+  }
+  #sub-input {
+    margin-left: 0.4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .body {
+    padding: 3rem 4%;
+  }
+  .header {
+    padding: 1.4rem 4%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  article {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 650px) {
+  article {
+    width: 100%;
+  }
+  section {
+    padding: 0;
+    width: 100%;
+  }
+  header,
+  .head-sub {
+    padding: 1.6rem 3%;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+  header p {
+    font-size: 0.7rem;
+  }
+  section {
+    padding: 5% 15%;
+  }
+  nav {
+    display: block;
+  }
+  form {
+    width: 100%;
+  }
+  #sub-input {
+    margin-left: 1.5rem;
+  }
+  #fasearch {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  select {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}
