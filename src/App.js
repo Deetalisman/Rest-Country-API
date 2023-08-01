@@ -133,7 +133,6 @@ function Subbody({ select, handleSelect, handleSearch, hanleSubmit, isDark }) {
         <option value="" hidden>
           Filter by region
         </option>
-        <option value="All">Africa</option>
         <option value="Africa">Africa</option>
         <option value="Asia">Asia</option>
         <option value="America">America</option>
