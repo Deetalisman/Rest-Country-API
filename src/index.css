@@ -34,6 +34,9 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
+head {
+  display: block;
+}
 .App {
   position: relative;
 }
@@ -72,7 +75,8 @@ header {
 .body {
   padding: 3rem 7%;
 }
-.body-sub {
+.body-sub,
+.viewsub {
   background-color: hsl(207, 26%, 17%);
   color: hsl(210, 1%, 44%);
 }
@@ -164,7 +168,59 @@ img {
 p span {
   font-weight: bold;
 }
-
+#arrow {
+  margin-right: 0.6rem;
+}
+.view {
+  width: 100%;
+  padding: 4rem;
+  color: hsl(210, 5%, 76%);
+}
+.viewco {
+  color: black;
+}
+.view button {
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  background-color: hsl(209, 19%, 30%);
+  border: 0;
+  border-radius: 0.3rem;
+  color: hsl(210, 5%, 76%);
+}
+.one {
+  margin-top: 2rem;
+  display: flex;
+}
+.one img {
+  width: 45%;
+  height: 25rem;
+}
+.two {
+  margin-left: 8%;
+  margin-top: 2rem;
+}
+.two h1 {
+  font-size: 3rem;
+}
+.three {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+.three p {
+  font-weight: bold;
+}
+.three p span {
+  font-weight: 400;
+}
+#subview {
+  display: none;
+}
+.sub-view {
+  display: block;
+}
 @media screen and (max-width: 1300px) {
   article {
     width: 31%;
@@ -185,7 +241,30 @@ p span {
   article {
     width: 45%;
   }
+  .view {
+    padding: 4rem 2rem;
+  }
+  .two {
+    margin-left: 2%;
+  }
 }
+@media screen and (max-width: 850px) {
+  .three {
+    display: block;
+  }
+  .two {
+    margin-left: 3%;
+    margin-top: 1rem;
+  }
+  .two h1 {
+    font-size: 2rem;
+  }
+  .one img {
+    width: 55%;
+    height: 25rem;
+  }
+}
+
 @media screen and (max-width: 650px) {
   article {
     width: 100%;
@@ -221,5 +300,12 @@ p span {
   select {
     margin-top: 1rem;
     padding: 1rem;
+  }
+  .one {
+    display: block;
+  }
+  .one img {
+    width: 100%;
+    height: 25rem;
   }
 }
