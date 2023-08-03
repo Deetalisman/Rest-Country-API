@@ -73,6 +73,7 @@ export default function App() {
   function handleBack() {
     // setCLICK([]);
     //setCountries(countries);
+    setIsView((isView) => !isView);
     const subView = document.querySelector("#subview");
     subView.style.display = "none";
     const head = document.querySelector(".head");
