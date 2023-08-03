@@ -11,8 +11,8 @@ export default function App() {
   const [input, setInput] = useState([]);
   const [filte, setFilte] = useState([]);
   const [isDark, setIsDark] = useState(false);
-  const [isView, setIsView] = useState("show");
-  const [error, setError] = useState("No Country found");
+  const [isView, setIsView] = useState(false);
+  const [error, setError] = useState("");
   const [CLICK, setCLICK] = useState([]);
 
   function handleDark() {
@@ -58,8 +58,10 @@ export default function App() {
     console.log(country);
     //const CLICK = countries.filter((cou) => cou.numericCode === numericCode);
     setCLICK(country);
+    //console.log(isView);
     //setCountries(CLICK);
-    //console.log(CLICK);
+    setIsView((isView) => !isView);
+    console.log(isView);
     const subView = document.querySelector("#subview");
     subView.style.display = "block";
     const head = document.querySelector(".head");
@@ -81,16 +83,20 @@ export default function App() {
 
   useEffect(() => {
     setCountries(data);
+    console.log(isDark);
+    console.log(isView);
   }, []);
 
   return (
     <>
       <Header handleDark={handleDark} isDark={isDark} />
+
       <Subview
         handleClick={handleClick}
         CLICK={CLICK}
         handleBack={handleBack}
         isDark={isDark}
+        isView={isView}
       />
 
       <Subbody
@@ -111,7 +117,7 @@ export default function App() {
   );
 }
 
-function Bugg({ countries, isDark, handleClick }) {
+function Bugg({ countries, isDark, handleClick, setIsView }) {
   return (
     <small>
       <section className={!isDark && "sub-section"}>
@@ -188,10 +194,10 @@ function Subbody({ select, handleSelect, handleSearch, hanleSubmit, isDark }) {
   );
 }
 
-function Subview({ CLICK, handleBack }) {
+function Subview({ CLICK, handleBack, isView }) {
   return (
     <div id="subview">
-      <View CLICK={CLICK} handleBack={handleBack} />
+      {isView && <View CLICK={CLICK} handleBack={handleBack} />}
     </div>
   );
 }
@@ -214,7 +220,7 @@ function View({ CLICK, handleBack }) {
         Back
       </button>
       <div className="one">
-        {CLICK && <img src={CLICK.flags.png} alt="flag" />}
+        <img src={CLICK.flags.png} alt="flag" />
         <div className="two">
           <h1>{name}</h1>
           <div className="three">
@@ -240,10 +246,10 @@ function View({ CLICK, handleBack }) {
                 Top Level Domain:<span> {topLevelDomain}</span>{" "}
               </p>
               <p>
-                Currencies: <span>{CLICK.currencies[0].name}</span>{" "}
+                Currencies: <span></span>{" "}
               </p>
               <p>
-                Languages: <span>{CLICK.languages[0].name}</span>
+                Languages: <span></span>
               </p>
             </div>
           </div>
