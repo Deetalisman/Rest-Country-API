@@ -247,10 +247,10 @@ function View({ CLICK, handleBack }) {
                 Top Level Domain:<span> {topLevelDomain}</span>{" "}
               </p>
               <p>
-                Currencies: <span></span>{" "}
+                Currencies: <span>{CLICK.currencies[0].name}</span>{" "}
               </p>
               <p>
-                Languages: <span></span>
+                Languages: <span>{CLICK.languages[0].name}</span>
               </p>
             </div>
           </div>
